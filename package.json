@@ -1,0 +1,22 @@
+{
+  "name": "anketahr",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "sass src/style.scss dist/style.css && vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "scss": "sass src/style.scss src/style.css"
+  },
+  "dependencies": {
+    "vue": "^3.5.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "sass": "^1.80.4",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.9",
+    "vue-tsc": "^2.1.6"
+  }
+}
