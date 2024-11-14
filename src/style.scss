@@ -184,39 +184,54 @@ $highlight_color: #EB5E28;
               z-index: 1;
               border-bottom-left-radius: 0;
               border-bottom-right-radius: 0;
-            }
+              animation-name: example;
+              animation-duration: 1s;
 
-            /* > :nth-child(1) img, :nth-child(2) img 
-            {
-              overflow: hidden;
-              object-fit: cover;
-            } */
+            }            
 
             > .left 
             {
               background-image: url(assets/milanovic_BW_done.png);
               background-color: $accent_color;
+
+              :hover
+                {
+                  background: linear-gradient(180deg, #0009, $accent_color);
+                  transition: 0.5s;
+                  color: rgba(0, 0, 0, 0.87);
+                }
             }
 
           > .right
             {
               background-image: url(assets/plank_B&W_finito.png);
               background-color: $highlight_color;
+
+              > .name
+              {
+                :hover
+                {
+                  background: linear-gradient(180deg, #0009, $highlight_color);
+                  transition: 0.5s;
+                  color: rgba(0, 0, 0, 0.87);
+                }
+              }
             }
 
-            > .name 
+            .name 
             {
               border: 1px solid $secondary_color;
               border-radius: 3px;
               border-top: 0;
               margin: 0;
-              margin-top: -1%;
+              margin-top: 57.3rem;
               flex-basis: 46%;
-              width: 46%;
               flex-grow: 0;
               display: flex;
               align-items: center;
-              justify-content: center;     
+              justify-content: center;    
+              animation-name: example;
+              animation-duration: 1s; 
 
               > p
               {
@@ -229,25 +244,12 @@ $highlight_color: #EB5E28;
                 width: 100%; //needed for the hover background to work properly
               }
             }
-            .name1
-              {              
-                :hover
-                {
-                  background: linear-gradient(-45deg, #0009, $accent_color);
-                  transition: 0.5s;
-                  color: rgba(0, 0, 0, 0.87);
-                }
-              }              
 
-              .name2
-              {
-                :hover
-                {
-                  background: linear-gradient(45deg, #0009, $highlight_color);
-                  transition: 0.5s;
-                  color: rgba(0, 0, 0, 0.87);
-                }
-              }
+            @keyframes winner 
+            {
+              from {transform: scale(100%);}
+              to {transform: scale(125%);}
+            }
           }
         }
       }

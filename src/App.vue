@@ -23,13 +23,15 @@
       </div>
       <div class="survey-container">
         <div class="survey">
-          <div class="left"></div>
-          <div class="right"></div>
-          <div class="name name1">
-            <p>Milanović</p>
+          <div class="left">
+            <div class="name">
+              <p>Milanović</p>
+            </div>
           </div>
-          <div class="name name2">
-            <p>Plenković</p>
+          <div class="right">
+            <div class="name">
+              <p>Plenković</p>
+            </div>
           </div>
         </div>
       </div>
