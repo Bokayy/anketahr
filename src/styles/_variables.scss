@@ -1,0 +1,13 @@
+@use "sass:color";
+
+//color palette
+$primary_color: #11111A;
+$secondary_color: #323561;
+$secondary_background: #A7C4C2;
+$accent_color: #97EFE9;
+$highlight_color: #EB5E28;
+
+@mixin size($height,$width) {
+  height: $height;
+  width: $width;
+}

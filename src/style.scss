@@ -1,23 +1,9 @@
-@use "sass:color";
-
-//color palette
-$primary_color: #11111A;
-$secondary_color: #323561;
-$secondary_background: #A7C4C2;
-$accent_color: #97EFE9;
-$highlight_color: #EB5E28;
-
-@mixin size($height,$width) {
-  height: $height;
-  width: $width;
-}
-
 :root {
     font-family: Jetbrains Mono;
   
     color-scheme: dark;
     color: rgba(255, 255, 255, 0.87);
-    background-color: $primary_color;
+    background-color: variables.$primary_color;
   
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -34,7 +20,7 @@ $highlight_color: #EB5E28;
   
   a {
     font-weight: 500;
-    color: $secondary_color;
+    color: variables.$secondary_color;
     text-decoration: inherit;
   }
   a:hover {
@@ -53,7 +39,7 @@ $highlight_color: #EB5E28;
     transition: border-color 0.25s;
   }
   button:hover {
-    border-color:  $secondary_color;
+    border-color:  variables.$secondary_color;
   }
   button:focus,
   button:focus-visible {
@@ -62,7 +48,7 @@ $highlight_color: #EB5E28;
 
   .divider
   {
-    background-color:$secondary_color;
+    background-color:variables.$secondary_color;
     min-width: 100%;
     height: 0.2rem;
   }
@@ -81,9 +67,10 @@ $highlight_color: #EB5E28;
       {
         height:7vh;
         > h1 {
-          padding: 2.5rem 0 0 5rem;
+          padding: 1.5rem 0 0rem 5rem;
           font-size: 5rem;
           line-height: 1.1;
+          margin:0;
         }
       }
 
@@ -103,7 +90,7 @@ $highlight_color: #EB5E28;
       z-index: -2;
       position: absolute;
       border-radius: 100%;
-      box-shadow: 70vw 40vh 10vw $accent_color;
+      box-shadow: 70vw 40vh 10vw variables.$accent_color;
       //box-shadow: 70vw 40vh 70vw var(#0f8377);
       height: 20vh;
       transform: translate(-80vw, -50vh);
@@ -115,143 +102,11 @@ $highlight_color: #EB5E28;
       z-index: -1;
       position: absolute;
       border-radius: 100%;
-      box-shadow: 12vw 20vh 10vw $highlight_color;
+      box-shadow: 12vw 20vh 10vw variables.$highlight_color;
       //box-shadow: 70vw 40vh 70vw var(#0f8377);
       height: 20vh;
       //transform: translate(120vw, 50vh);
       width: 15vw;
-      }
-
-      .card
-      {
-        border: 1px solid $secondary_color;
-        border-radius: 2%;
-        @include size(90rem, 70rem);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-        > .title-container
-        {
-          height: 6rem;
-            > h2
-            {
-              font-style: italic;
-              font-size: 4rem;
-              margin: 0;
-              margin-top:1.4rem;
-              padding: 0;
-              text-align: center;
-            }
-        }
-
-        > .divider
-        {
-          display:inline;
-          margin-top: 2rem;
-        }
-
-        > .survey-container
-        {
-          height: 82rem;
-          width: 70rem;
-          > .survey
-          {
-            display: flex;
-            @include size(100%,100%);
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            width: inherit;
-            height: inherit;
-            flex-wrap: wrap;
-            align-content: center;
-
-            > .left, .right
-            {
-              background-position: center bottom;
-              background-size: 220%; /* scales image to cover the container */
-              //background-position: -15rem 2rem; /* centers the image */
-              background-repeat: no-repeat; /* prevents tiling */
-              border: 1px solid $secondary_color;
-              flex-basis: 46%;
-              flex-grow: 0;
-              flex-shrink: 0;
-              flex-wrap: nowrap;
-              height: 70%;
-              border-radius: 2%;
-              width: 50%;
-              z-index: 1;
-              border-bottom-left-radius: 0;
-              border-bottom-right-radius: 0;
-              animation-name: example;
-              animation-duration: 1s;
-
-            }            
-
-            > .left 
-            {
-              background-image: url(assets/milanovic_BW_done.png);
-              background-color: $accent_color;
-
-              :hover
-                {
-                  background: linear-gradient(180deg, #0009, $accent_color);
-                  transition: 0.5s;
-                  color: rgba(0, 0, 0, 0.87);
-                }
-            }
-
-          > .right
-            {
-              background-image: url(assets/plank_B&W_finito.png);
-              background-color: $highlight_color;
-
-              > .name
-              {
-                :hover
-                {
-                  background: linear-gradient(180deg, #0009, $highlight_color);
-                  transition: 0.5s;
-                  color: rgba(0, 0, 0, 0.87);
-                }
-              }
-            }
-
-            .name 
-            {
-              border: 1px solid $secondary_color;
-              border-radius: 3px;
-              border-top: 0;
-              margin: 0;
-              margin-top: 57.3rem;
-              flex-basis: 46%;
-              flex-grow: 0;
-              display: flex;
-              align-items: center;
-              justify-content: center;    
-              animation-name: example;
-              animation-duration: 1s; 
-
-              > p
-              {
-                text-align: center;
-                text-justify: inter-word;
-                font-size: 4rem;
-                margin: 0;
-                font-style: italic;
-                padding: 1rem;
-                width: 100%; //needed for the hover background to work properly
-              }
-            }
-
-            @keyframes winner 
-            {
-              from {transform: scale(100%);}
-              to {transform: scale(125%);}
-            }
-          }
-        }
       }
     }
   }
