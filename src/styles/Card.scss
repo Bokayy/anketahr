@@ -30,18 +30,13 @@
             display: flex;
             @include variables.size(100%, 100%);
             flex-direction: row;
-            justify-content: space-around;
-            align-items: baseline;
-            width: inherit;
-            height: inherit;
-            flex-wrap: wrap;
-            align-content: center;
+            justify-content: space-evenly;
+            align-items: center;
 
             > .left,
             .right {
                 background-position: center bottom;
                 background-size: 220%; /* scales image to cover the container */
-                //background-position: -15rem 2rem; /* centers the image */
                 background-repeat: no-repeat; /* prevents tiling */
                 border: 1px solid variables.$secondary_color;
                 flex-basis: 46%;
@@ -50,35 +45,30 @@
                 flex-wrap: nowrap;
                 height: 70%;
                 border-radius: 2%;
-                width: 50%;
                 z-index: 1;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
-                animation-name: example;
-                animation-duration: 1s;
             }
 
             > .left {
                 background-image: url(../assets/milanovic_BW_done.png);
                 background-color: variables.$accent_color;
 
-                :hover {
+                > .name:hover {
                     background: linear-gradient(180deg, #0009, variables.$accent_color);
                     transition: 0.5s;
                     color: rgba(0, 0, 0, 0.87);
                 }
             }
 
-            > .right {
+            >.right {
                 background-image: url(../assets/plank_B&W_finito.png);
                 background-color: variables.$highlight_color;
 
-                > .name {
-                    :hover {
-                        background: linear-gradient(180deg, #0009, variables.$highlight_color);
-                        transition: 0.5s;
-                        color: rgba(0, 0, 0, 0.87);
-                    }
+                >.name:hover {
+                    background: linear-gradient(180deg, #0009, variables.$highlight_color);
+                    transition: 0.5s;
+                    color: rgba(0, 0, 0, 0.87);
                 }
             }
 
@@ -98,7 +88,6 @@
 
                 > p {
                     text-align: center;
-                    text-justify: inter-word;
                     font-size: 4rem;
                     margin: 0;
                     font-style: italic;
