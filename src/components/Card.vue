@@ -17,14 +17,10 @@ const props = defineProps<{title_header: string, title_left: string, title_right
     <div class="survey-container">
       <div class="survey">
         <div class="left">
-          <div class="name">
-            <p>Milanović</p>
-          </div>
+          <p>Milanović</p>
         </div>
         <div class="right">
-          <div class="name">
-            <p>Plenković</p>
-          </div>
+          <p>Plenković</p>
         </div>
       </div>
     </div>

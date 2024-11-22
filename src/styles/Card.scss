@@ -48,13 +48,29 @@
                 z-index: 1;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
+
+                > p {
+                    font-size: 4rem;
+
+                    border: 1px solid variables.$secondary_color;
+                    border-radius: 3px;
+                    border-top: 0;
+                    margin: 57rem 0 0 -0.1rem;
+                    padding: 1rem 0 1rem 0; 
+
+                    text-align: center;
+                    
+                    font-style: italic;
+                    width: 100%; //needed for the hover background to work properly
+                    font-weight: bold;
+                }                
             }
 
             > .left {
                 background-image: url(../assets/milanovic_BW_done.png);
                 background-color: variables.$accent_color;
 
-                > .name:hover {
+                >p:hover {
                     background: linear-gradient(180deg, #0009, variables.$accent_color);
                     transition: 0.5s;
                     color: rgba(0, 0, 0, 0.87);
@@ -65,35 +81,10 @@
                 background-image: url(../assets/plank_B&W_finito.png);
                 background-color: variables.$highlight_color;
 
-                >.name:hover {
+                >p:hover{
                     background: linear-gradient(180deg, #0009, variables.$highlight_color);
                     transition: 0.5s;
                     color: rgba(0, 0, 0, 0.87);
-                }
-            }
-
-            .name {
-                border: 1px solid variables.$secondary_color;
-                border-radius: 3px;
-                border-top: 0;
-                margin: 0;
-                margin-top: 57.3rem;
-
-                flex-grow: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                animation-name: example;
-                animation-duration: 1s;
-
-                > p {
-                    text-align: center;
-                    font-size: 4rem;
-                    margin: 0;
-                    font-style: italic;
-                    padding: 1rem;
-                    width: 100%; //needed for the hover background to work properly
-                    font-weight: bold;
                 }
             }
 
